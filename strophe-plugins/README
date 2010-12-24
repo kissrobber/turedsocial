@@ -1,0 +1,40 @@
+* facebook.js
+
+Plugin desarrollado para conectarse al chat de Facebook usando la libreria strophejs (https://github.com/metajack/strophejs).
+Usa la version 1.0 de esta libreria
+
+Ejemplo de uso:
+
+connectionFacebook = new Strophe.Connection("http://localhost:5280/bosh");
+connectionFacebook.facebookConnect("12345@chat.facebook.com",onConnectFacebook,300,1,'5e64a30272af065bd72258c565a03f2f','8147a27e4a7f9b55ffc85c2683f9529a',FB.getSession().session_key);
+
+* tuenti.js
+
+Plugin desarrollado para conectarse al chat de Tuenti usando la libreria strophejs (https://github.com/metajack/strophejs).
+Usa la version 1.0 de esta libreria
+
+Ejemplo de uso:
+
+connectionTuenti = new Strophe.Connection("http://localhost:5280/bosh");
+connectionTuenti.tuentiConnect("123456789@xmpp9.tuenti.com","123456789","RuKkAt9h5VJr4L3b3JL2xn55Gd3uBBymxO7RUTS",onConnectTuenti,300,1);
+
+
+* facebook.js
+
+Plugin developed for connecting Facebook Chat using the library strophejs (https://github.com/metajack/strophejs). 
+It uses version 1.0 of this library
+
+Usage Example:
+
+connectionFacebook = new Strophe.Connection("http://localhost:5280/bosh");
+connectionFacebook.facebookConnect("12345@chat.facebook.com",onConnectFacebook,300,1,'5e64a30272af065bd72258c565a03f2f','8147a27e4a7f9b55ffc85c2683f9529a',FB.getSession().session_key);
+
+* tuenti.js
+
+Plugin developed for connecting Tuenti Chat using the library strophejs (https://github.com/metajack/strophejs). 
+It uses version 1.0 of this library
+
+Usage Example:
+
+connectionTuenti = new Strophe.Connection("http://localhost:5280/bosh");
+connectionTuenti.tuentiConnect("123456789@xmpp9.tuenti.com","123456789","RuKkAt9h5VJr4L3b3JL2xn55Gd3uBBymxO7RUTS",onConnectTuenti,300,1);
