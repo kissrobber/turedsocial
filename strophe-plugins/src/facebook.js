@@ -187,10 +187,11 @@ Strophe.Connection.prototype._connect_fb = function (req) {
             // by sending a blank poll request
             var body = this._buildBody();
             this._requests.push(
-                new Strophe.Request(body.tree(),
-                                    this._onRequestStateChange.bind(this)
-                                      .prependArg(this._connect_cb.bind(this)),
-                                    body.tree().getAttribute("rid")));
+            	new Strophe.Request(body.tree(),
+                                this._onRequestStateChange.bind(
+                                    this, this._connect_fb.bind(this)),
+                                body.tree().getAttribute("rid")));
+                                    
             this._throttledRequestHandler();
             return;
         } else {
@@ -282,8 +283,8 @@ Strophe.Connection.prototype.facebookConnect = function (jid, callback, wait, ho
 
     this._requests.push(
         new Strophe.Request(body.tree(),
-                            this._onRequestStateChange.bind(this)
-                                .prependArg(this._connect_fb.bind(this)),
+                            this._onRequestStateChange.bind(
+                                this, this._connect_fb.bind(this)),
                             body.tree().getAttribute("rid")));
     this._throttledRequestHandler();
 };
